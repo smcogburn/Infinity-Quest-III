@@ -748,20 +748,35 @@ _/  |_|  |__   ____     __| _/____ _______|  | __ __  _  _____________|  |    __
         while True:
             name = input("Enter your name: ").strip()
             if name:
-                self.player.name = name
                 if name == "motherlode":
                     print("You found a secret...")
                     wait_for_enter()
                     self.player.credits = 999999
-                if name == "catchmeifucan":
+                elif name == "5starwanted":
                     print("You found a secret...")
                     wait_for_enter()
                     self.player.credits = 999999
                     self.player.heat = 100
-                    # self.player.cartel_threat_level = 10
-                    self.player.hp = 1000
-
-                break
+                elif name == "catchmeifucan":
+                    print("You found a secret...")
+                    wait_for_enter()
+                    self.player.credits = 999999
+                    self.player.cartel_threat_level = 10
+                elif name == "need4speed":
+                    print("You found a secret...")
+                    wait_for_enter()
+                    self.ship.speed = 5
+                    self.ship.max_fuel = 20
+                    self.ship.fuel = 20
+                    self.ship.cargo = 5
+                elif name == "idkfa":
+                    print("You found a secret...")
+                    wait_for_enter()
+                    self.player.equip_weapon(WEAPONS[9])
+                    self.player.equip_armor(ARMORS[9])
+                else:
+                    self.player.name = name
+                    break
             print("Please enter a valid name.")
         print(f"[NOVA] 'Welcome back, {self.player.name}. Did we survive the last job or just blackout again?'")
         wait_for_enter()

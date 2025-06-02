@@ -42,9 +42,9 @@ class Crate:
         
         # Determine if it's a stone based on tier
         stone_chance = {
-            "legit": 0.05,  # 5% chance
-            "illicit": 0.1,  # 10% chance
-            "sealed": 0.85  # 85% chance
+            "legit": 0.01,  # 1% chance
+            "illicit": 0.01,  # 5% chance
+            "sealed": 0.15  # 15% chance
         }
         
         if DiceRoller.chance(stone_chance[self.tier]):
